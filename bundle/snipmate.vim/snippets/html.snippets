@@ -78,7 +78,7 @@ snippet doct
 	"http://www.w3.org/TR/html4/loose.dtd">
 # HTML Doctype 5
 snippet doct5
-	<!DOCTYPE HTML>
+	<!DOCTYPE html>
 # XHTML Doctype 1.0 Frameset
 snippet docxf
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
@@ -96,7 +96,7 @@ snippet docx
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 snippet html
-	<html>
+	<html lang="en">
 	${1}
 	</html>
 snippet xhtml
@@ -109,23 +109,25 @@ snippet body
 	</body>
 snippet head
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8"`Close()`>
-
+		${1}
+	</head>
+snippet headt
+	<head>
 		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
 		${2}
 	</head>
 snippet title
 	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
 snippet script
-	<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript">
 		${1}
 	</script>${2}
 snippet scriptsrc
-	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
+	<script src="${1}.js" type="text/javascript"></script>${2}
 snippet style
-	<style type="text/css" media="${1:screen}">
-		${2}
-	</style>${3}
+	<style type="text/css">
+		${1}
+	</style>${2}
 snippet base
 	<base href="${1}" target="${2}"`Close()`>
 snippet r
